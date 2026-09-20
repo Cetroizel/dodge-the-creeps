@@ -3,11 +3,15 @@ extends Node
 @export var mob_scene: PackedScene
 var score
 
+func _ready() -> void:
+	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
 
 func game_over():
+	GameState.update_high_score(score)
 	$HUD.show_game_over()
 	$ScoreTimer.stop()
 	$MobTimer.stop()
