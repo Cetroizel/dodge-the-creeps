@@ -1,0 +1,16 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Exports
+*.exe
+*.pck
+*.zip
+build/
+
+# Addon d'outillage d'editeur : reinstallable depuis l'AssetLib,
+# et ses binaires natifs pesaient 25 Mo pour les trois OS.
+/addons/godot-git-plugin/
+
+# Fichiers de sauvegarde Godot
+~*
