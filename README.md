@@ -11,6 +11,7 @@ Le highscore persistant (autoload `GameState` et sauvegarde JSON) a été ajout�
 | Étape | Modification | Pattern | Issue |
 |---|---|---|---|
 | 0.1 | Typage statique sur les cinq scripts | — | [#2](https://github.com/Cetroizel/dodge-the-creeps/issues/2) |
+| 0.2 | Rangement par feature | — | [#17](https://github.com/Cetroizel/dodge-the-creeps/issues/17) |
 | 1.1 | `MobType` en Resource | Composition, Flyweight | [#3](https://github.com/Cetroizel/dodge-the-creeps/issues/3) |
 | 1.2 | `MobSpawner` | Factory | [#4](https://github.com/Cetroizel/dodge-the-creeps/issues/4) |
 | 2.1 | Strategy à comportement identique | Strategy | [#5](https://github.com/Cetroizel/dodge-the-creeps/issues/5) |
