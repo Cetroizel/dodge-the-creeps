@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MobType" format=3 uid="uid://cyuxkvhehh76g"]
+
+[ext_resource type="Script" uid="uid://cqiuvt15tvua6" path="res://mob/mob_type.gd" id="1_wlomh"]
+[ext_resource type="SpriteFrames" uid="uid://dgl60n2v4bwed" path="res://mob/mob_frames.tres" id="2_5uppr"]
+
+[resource]
+script = ExtResource("1_wlomh")
+display_name = "Nageur"
+sprite_frames = ExtResource("2_5uppr")
+animations = Array[StringName]([&"swim"])

@@ -4,8 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://beimx354t1ch2" path="res://player/player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://crpqlacfr1c53" path="res://mob/mob.tscn" id="2_h2yge"]
 [ext_resource type="AudioStream" uid="uid://ddiuj4mfrdmyx" path="res://audio/music/house_in_a_forest_loop.ogg" id="3_7mycd"]
+[ext_resource type="Script" uid="uid://cqiuvt15tvua6" path="res://mob/mob_type.gd" id="3_bsumw"]
 [ext_resource type="AudioStream" uid="uid://c35n18bg52lem" path="res://audio/sfx/gameover.wav" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bi7ej7aqapps0" path="res://ui/hud.tscn" id="4_1bvp3"]
+[ext_resource type="Resource" uid="uid://bjaupakk0ybdy" path="res://mob/types/fast.tres" id="4_fwcvl"]
+[ext_resource type="Resource" uid="uid://i5345ktfakry" path="res://mob/types/fly.tres" id="5_na0o7"]
+[ext_resource type="Resource" uid="uid://cyuxkvhehh76g" path="res://mob/types/swim.tres" id="6_73k8k"]
+[ext_resource type="Resource" uid="uid://81hm6mkcg5mr" path="res://mob/types/walk.tres" id="7_5xyti"]
 
 [sub_resource type="Curve2D" id="Curve2D_h2yge"]
 _data = {
@@ -16,6 +21,7 @@ point_count = 5
 [node name="Main" type="Node" unique_id=1514048407]
 script = ExtResource("1_0xm2m")
 mob_scene = ExtResource("2_h2yge")
+mob_types = Array[ExtResource("3_bsumw")]([ExtResource("4_fwcvl"), ExtResource("5_na0o7"), ExtResource("6_73k8k"), ExtResource("7_5xyti")])
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1429997337]
 anchors_preset = 15

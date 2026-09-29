@@ -1,10 +1,11 @@
 extends Node
 
 @export var mob_scene: PackedScene
+@export var mob_types: Array[MobType] = []
 var score: int
 
 func _ready() -> void:
-	pass
+	assert(not mob_types.is_empty(), "renseigner mob_types dans l'inspecteur de Main")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -29,7 +30,9 @@ func new_game() -> void:
 
 func _on_mob_timer_timeout() -> void:
 	# Create a new instance of the Mob scene.
-	var mob: RigidBody2D = mob_scene.instantiate() as RigidBody2D
+	var mob: Mob = mob_scene.instantiate() as Mob
+	var type: MobType = mob_types.pick_random()
+	mob.setup(type)
 
 	# Choose a random location on Path2D.
 	var mob_spawn_location: PathFollow2D = $MobPath/MobSpawnLocation
@@ -46,7 +49,7 @@ func _on_mob_timer_timeout() -> void:
 	mob.rotation = direction
 
 	# Choose the velocity for the mob.
-	var velocity: Vector2 = Vector2(randf_range(150.0, 250.0), 0.0)
+	var velocity: Vector2 = Vector2(randf_range(type.speed_min, type.speed_max), 0.0)
 	mob.linear_velocity = velocity.rotated(direction)
 
 	# Spawn the mob by adding it to the Main scene.

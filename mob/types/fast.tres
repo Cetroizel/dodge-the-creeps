@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MobType" format=3 uid="uid://bjaupakk0ybdy"]
+
+[ext_resource type="Script" uid="uid://cqiuvt15tvua6" path="res://mob/mob_type.gd" id="1_gwybx"]
+[ext_resource type="SpriteFrames" uid="uid://dgl60n2v4bwed" path="res://mob/mob_frames.tres" id="2_sbdac"]
+
+[resource]
+script = ExtResource("1_gwybx")
+display_name = "Rapide"
+sprite_frames = ExtResource("2_sbdac")
+animations = Array[StringName]([&"walk", &"fly", &"swim"])
+speed_min = 350.0
+speed_max = 500.0
