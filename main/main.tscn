@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://bjaupakk0ybdy" path="res://mob/types/fast.tres" id="4_fwcvl"]
 [ext_resource type="Resource" uid="uid://i5345ktfakry" path="res://mob/types/fly.tres" id="5_na0o7"]
 [ext_resource type="Resource" uid="uid://cyuxkvhehh76g" path="res://mob/types/swim.tres" id="6_73k8k"]
+[ext_resource type="Script" uid="uid://8s0mefo7rif" path="res://mob/mob_spawner.gd" id="6_fwcvl"]
 [ext_resource type="Resource" uid="uid://81hm6mkcg5mr" path="res://mob/types/walk.tres" id="7_5xyti"]
 
 [sub_resource type="Curve2D" id="Curve2D_h2yge"]
@@ -18,10 +19,9 @@ _data = {
 }
 point_count = 5
 
-[node name="Main" type="Node" unique_id=1514048407]
+[node name="Main" type="Node" unique_id=1514048407 node_paths=PackedStringArray("spawner")]
 script = ExtResource("1_0xm2m")
-mob_scene = ExtResource("2_h2yge")
-mob_types = Array[ExtResource("3_bsumw")]([ExtResource("4_fwcvl"), ExtResource("5_na0o7"), ExtResource("6_73k8k"), ExtResource("7_5xyti")])
+spawner = NodePath("MobSpawner")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1429997337]
 anchors_preset = 15
@@ -57,6 +57,11 @@ curve = SubResource("Curve2D_h2yge")
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" unique_id=273418969]
 
 [node name="HUD" parent="." unique_id=1577442158 instance=ExtResource("4_1bvp3")]
+
+[node name="MobSpawner" type="Node" parent="." unique_id=501803016]
+script = ExtResource("6_fwcvl")
+mob_scene = ExtResource("2_h2yge")
+available_types = Array[ExtResource("3_bsumw")]([ExtResource("4_fwcvl"), ExtResource("5_na0o7"), ExtResource("6_73k8k"), ExtResource("7_5xyti")])
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
