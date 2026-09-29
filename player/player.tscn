@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://beimx354t1ch2"]
 
-[ext_resource type="Texture2D" uid="uid://crecj8ji5p51l" path="res://art/playerGrey_up1.png" id="1_hqtel"]
-[ext_resource type="Script" uid="uid://idujfyi2br6t" path="res://player.gd" id="1_sweqy"]
-[ext_resource type="Texture2D" uid="uid://cj38w25c0pr8n" path="res://art/playerGrey_up2.png" id="2_sweqy"]
-[ext_resource type="Texture2D" uid="uid://boegrkcnsdbn3" path="res://art/playerGrey_walk1.png" id="3_2hs0m"]
-[ext_resource type="Texture2D" uid="uid://cb6ud15d5qhgl" path="res://art/playerGrey_walk2.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://crecj8ji5p51l" path="res://player/sprites/player_grey_up1.png" id="1_hqtel"]
+[ext_resource type="Script" uid="uid://idujfyi2br6t" path="res://player/player.gd" id="1_sweqy"]
+[ext_resource type="Texture2D" uid="uid://cj38w25c0pr8n" path="res://player/sprites/player_grey_up2.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://boegrkcnsdbn3" path="res://player/sprites/player_grey_walk1.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://cb6ud15d5qhgl" path="res://player/sprites/player_grey_walk2.png" id="4_1jxqw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xhwo6"]
 animations = [{
